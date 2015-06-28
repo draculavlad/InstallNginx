@@ -74,9 +74,11 @@ export "PATH=$PATH:$HOME/bin"
 
 # Install Libvpx
 cd /opt
-git clone http://git.chromium.org/webm/libvpx.git
+#git clone http://git.chromium.org/webm/libvpx.git
+git clone https://chromium.googlesource.com/webm/libvpx
 cd libvpx
-git checkout tags/v.1.3.0
+#git checkout tags/v.1.3.0
+git checkout v1.3.0
 ./configure --prefix="$HOME/ffmpeg_build" --disable-examples
 make
 make install
@@ -89,10 +91,22 @@ cd x264
 make
 make install
 
+# Install faac
+cd /opt
+wget http://downloads.sourceforge.net/faac/faac-1.28.tar.gz
+tar -xzf faac-1.28.tar.gz
+cd faac-1.28
+./bootstrap
+./configure
+make && make install
+ldconfig
+cd
+
 # Configure Libraries
 export LD_LIBRARY_PATH=/usr/local/lib/
 echo /usr/local/lib >> /etc/ld.so.conf.d/custom-libs.conf
 ldconfig
+
 
 # Compile FFmpeg (the configure options have to be on one line)
 cd /opt
