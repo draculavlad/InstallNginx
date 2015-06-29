@@ -1,5 +1,6 @@
 #!/bin/bash
 # references: http://wiki.razuna.com/display/ecp/FFMpeg+Installation+on+CentOS+and+RedHat
+# references: http://www.cnblogs.com/wainiwann/p/3866254.html
 
 # install dependency
 # if for centos 6 then do [rpm -Uhv http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el6.rf.x86_64.rpm]
