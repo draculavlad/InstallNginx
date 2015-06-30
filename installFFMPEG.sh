@@ -1,4 +1,5 @@
 #!/bin/bash
+# better compact with centos6.x
 # references: http://wiki.razuna.com/display/ecp/FFMpeg+Installation+on+CentOS+and+RedHat
 # references: http://www.cnblogs.com/wainiwann/p/3866254.html
 
